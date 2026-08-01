@@ -1,0 +1,28 @@
+:root {
+  --color-background: #183f2a;
+  --color-card: #003719;
+  --color-accent: #f7f723;
+  --color-blue: #3253f9;
+  --color-white: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  background: var(--color-background);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+.Skranji {
+  font-family: "Skranji", system-ui;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
