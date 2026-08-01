@@ -14,9 +14,17 @@
     &-image {
       width: 100%;
       height: 400px;
+      object-fit: cover;
+    }
+    &-imageBlur {
+      transition: 0.1s;
+      background: var(--color-card);
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 400px;
       left: 0;
       top: 0;
-      object-fit: cover;
     }
     &-content {
       width: 100%;

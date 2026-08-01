@@ -13,5 +13,13 @@
     "title": "Movies Wathclist",
     "url": "https://erbol.dev",
     "inDevelopment": true
+  },
+  {
+    "title": "Qoomus - Central Asian Marketplace",
+    "url": "https://qoomus.vercel.app/"
+  },
+  {
+    "title": "Soulify - Make Old Chats Alive Again",
+    "url": "https://www.soulify.chat/"
   }
 ]

@@ -10,15 +10,12 @@ import Loader from "../../components/loader";
 
 const FormPage = () => {
   const [scrollY, setScrollY] = useState(window.scrollY);
-  console.log(scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -32,6 +29,12 @@ const FormPage = () => {
             className="formPage__form-image"
             src={Portrait}
             alt="Form Image"
+          />
+          <div
+            style={{
+              opacity: `${scrollY / 3}%`,
+            }}
+            className="formPage__form-imageBlur"
           />
           <div className="formPage__form-content">
             <div className="formPage__form-content-transition" />
