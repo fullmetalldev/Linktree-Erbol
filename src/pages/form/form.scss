@@ -17,7 +17,7 @@
       object-fit: cover;
     }
     &-imageBlur {
-      transition: 0.1s;
+      transition: 0.3s;
       background: var(--color-card);
       opacity: 0;
       position: absolute;
@@ -43,17 +43,23 @@
         a {
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 5px;
-          padding: 15px;
-          border-radius: 15px;
+          font-weight: bold;
+          padding: 25px 15px;
+          border-radius: 25px;
           width: 100%;
           background: var(--color-background);
           text-decoration: none;
           color: var(--color-white);
+          svg {
+            width: 18px;
+            height: 18px;
+          }
           span {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 10px;
           }
         }
       }

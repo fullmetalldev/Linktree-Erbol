@@ -4,6 +4,7 @@ import LinkedInIcon from "../../assets/linkedin";
 import InstagramIcon from "../../assets/instagram";
 import GithubIcon from "../../assets/github";
 import VerifiedMark from "../../assets/verifiedmark";
+import LinkIcon from "../../assets/linkIcon";
 import Links from "../../links.json";
 import { useEffect, useState } from "react";
 import Loader from "../../components/loader";
@@ -32,7 +33,7 @@ const FormPage = () => {
           />
           <div
             style={{
-              opacity: `${scrollY / 3}%`,
+              opacity: `${scrollY / 4}%`,
             }}
             className="formPage__form-imageBlur"
           />
@@ -59,10 +60,14 @@ const FormPage = () => {
               {Links.map((link) => (
                 <a target="_blank" href={link.url}>
                   {link.title}
-                  {link.inDevelopment && (
+                  {link.inDevelopment ? (
                     <span>
                       (In Development
                       <Loader />)
+                    </span>
+                  ) : (
+                    <span>
+                      <LinkIcon />
                     </span>
                   )}
                 </a>
