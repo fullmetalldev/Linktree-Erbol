@@ -11,6 +11,10 @@
     overflow: hidden;
     box-shadow: 0px 0px 30px 10px var(--color-shadow);
     position: relative;
+    .VerifiedMark {
+      width: 24px;
+      height: 24px;
+    }
     .fixed {
       position: absolute;
       right: 30px;
