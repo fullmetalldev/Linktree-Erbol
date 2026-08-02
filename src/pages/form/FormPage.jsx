@@ -8,9 +8,24 @@ import LinkIcon from "../../assets/linkIcon";
 import Links from "../../links.json";
 import { useEffect, useState } from "react";
 import Loader from "../../components/loader";
+import ShareLink from "../../assets/share";
 
 const FormPage = () => {
   const [scrollY, setScrollY] = useState(window.scrollY);
+
+  const sharePage = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: "Check out this page",
+        url: window.location.href,
+      });
+    } else {
+      // Fallback for browsers without Web Share API
+      navigator.clipboard.writeText(window.location.href);
+      alert("Link copied!");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +41,14 @@ const FormPage = () => {
     <div className="formPage">
       <div className="container">
         <div className="formPage__form">
+          <button
+            aria-label="Share the page"
+            onClick={() => sharePage()}
+            className="fixed"
+          >
+            <ShareLink />
+          </button>
+
           <img
             className="formPage__form-image"
             src={Portrait}
@@ -45,20 +68,32 @@ const FormPage = () => {
             </div>
             <span>Software Engineer III</span>
             <div className="formPage__form-content-socials">
-              <a target="_blank" href="https://www.linkedin.com/in/erbollldev/">
+              <a
+                aria-label="Open Linkedin Profile"
+                target="_blank"
+                href="https://www.linkedin.com/in/erbollldev/"
+              >
                 <LinkedInIcon />
               </a>
-              <a target="_blank" href="https://www.instagram.com/e.nrkvv/">
+              <a
+                aria-label="Open Instagram Profile"
+                target="_blank"
+                href="https://www.instagram.com/e.nrkvv/"
+              >
                 <InstagramIcon />
               </a>
-              <a target="_blank" href="https://github.com/fullmetalldev">
+              <a
+                aria-label="Open Github Profile"
+                target="_blank"
+                href="https://github.com/fullmetalldev"
+              >
                 <GithubIcon />
               </a>
             </div>
 
             <ul className="formPage__form-content-list">
-              {Links.map((link) => (
-                <a target="_blank" href={link.url}>
+              {Links.map((link, idx) => (
+                <a key={idx} target="_blank" href={link.url}>
                   {link.title}
                   {link.inDevelopment ? (
                     <span>
@@ -67,7 +102,7 @@ const FormPage = () => {
                     </span>
                   ) : (
                     <span>
-                      <LinkIcon />
+                      (<LinkIcon />)
                     </span>
                   )}
                 </a>
