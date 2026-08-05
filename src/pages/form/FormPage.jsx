@@ -103,7 +103,7 @@ const FormPage = () => {
                       <LinkIcon /> 
                     </span>
                   )}
-                  {link.title}
+                   {link.title}
                 </a>
               ))}
             </ul>
