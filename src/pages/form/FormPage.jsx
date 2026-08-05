@@ -96,11 +96,11 @@ const FormPage = () => {
                 <a key={idx} target="_blank" href={link.url}>
                   {link.inDevelopment ? (
                     <span>
-                      <Loader />
+                      <Loader /> 
                     </span>
                   ) : (
                     <span>
-                      <LinkIcon />
+                      <LinkIcon /> 
                     </span>
                   )}
                   {link.title}
