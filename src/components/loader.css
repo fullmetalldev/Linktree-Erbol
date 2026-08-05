@@ -1,6 +1,6 @@
 .loader {
   --color-1: #ffffff;
-  --color-2: var(--color-blue);
+  --color-2: var(--color-accent);
   --color-3: rgba(255, 255, 255, 0.5);
   --color-4: rgba(255, 255, 255, 0.7);
   --size: 0.25px;

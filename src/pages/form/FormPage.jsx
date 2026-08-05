@@ -94,16 +94,8 @@ const FormPage = () => {
             <ul className="formPage__form-content-list">
               {Links.map((link, idx) => (
                 <a key={idx} target="_blank" href={link.url}>
-                  {link.inDevelopment ? (
-                    <span>
-                      <Loader /> 
-                    </span>
-                  ) : (
-                    <span>
-                      <LinkIcon /> 
-                    </span>
-                  )}
-                   {link.title}
+                  {link.inDevelopment ? <Loader /> : <LinkIcon />}
+                  {link.title}
                 </a>
               ))}
             </ul>
