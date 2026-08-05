@@ -94,10 +94,8 @@ const FormPage = () => {
             <ul className="formPage__form-content-list">
               {Links.map((link, idx) => (
                 <a key={idx} target="_blank" href={link.url}>
-                  {link.title}
                   {link.inDevelopment ? (
                     <span>
-                      (In Development
                       <Loader />)
                     </span>
                   ) : (
@@ -105,6 +103,7 @@ const FormPage = () => {
                       (<LinkIcon />)
                     </span>
                   )}
+                  {link.title}
                 </a>
               ))}
             </ul>
