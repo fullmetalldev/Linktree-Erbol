@@ -6,19 +6,16 @@
   {
     "title": "IOS Style Portfolio 2",
     "url": "https://ios.erbol.dev",
+    "inDevelopment": false
+  },
+  {
+    "title": "Kyrgyz AI - JarvisBek",
+    "url": "https://jarvisbek.org",
     "inDevelopment": true
   },
   {
     "title": "Movies Wathclist",
     "url": "https://movies.erbol.dev",
     "inDevelopment": true
-  },
-  {
-    "title": "Qoomus - Central Asian Marketplace",
-    "url": "https://qoomus.vercel.app/"
-  },
-  {
-    "title": "Soulify - Make Old Chats Alive Again",
-    "url": "https://www.soulify.chat/"
   }
 ]
