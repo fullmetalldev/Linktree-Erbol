@@ -1,5 +1,5 @@
 import "./form.scss";
-import Portrait from "../../assets/IMG_3416.jpeg";
+import Portrait from "../../assets/IMG_5153.jpeg";
 import LinkedInIcon from "../../assets/linkedin";
 import InstagramIcon from "../../assets/instagram";
 import GithubIcon from "../../assets/github";
