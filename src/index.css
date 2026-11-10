@@ -5,6 +5,9 @@
   --color-blue: #3253f9;
   --color-white: #ffffff;
   --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-muted: rgba(255, 255, 255, 0.7);
+  --color-glass: rgba(46, 33, 79, 0.55);
+  --color-glass-border: rgba(255, 255, 255, 0.14);
 }
 
 html {
